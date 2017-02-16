@@ -34,13 +34,13 @@
         {
             //Arrange
             $test_ScrabbleScore = new ScrabbleScore;
-            $input = "perhaps";
+            $input = "hello";
 
             //Act
             $result = $test_ScrabbleScore->test_Input($input);
 
             //Assert
-            $this->assertEquals(14 , $result);
+            $this->assertEquals(8 , $result);
         }
     }
 

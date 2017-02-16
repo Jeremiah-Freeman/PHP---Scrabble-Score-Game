@@ -1,6 +1,15 @@
 <?php
     class ScrabbleScore
     {
+        public $word;
+        public $score;
+
+        function __construct($word, $score)
+        {
+            $this->word = $word;
+            $this->score = $score;
+        }
+
         public $list_of_letters = array(
             'a' => 1,
             'e' => 1,
