@@ -29,6 +29,19 @@
             //Assert
             $this->assertEquals(7 , $result);
         }
+
+        function test_Input()
+        {
+            //Arrange
+            $test_ScrabbleScore = new ScrabbleScore;
+            $input = "perhaps";
+
+            //Act
+            $result = $test_ScrabbleScore->test_Input($input);
+
+            //Assert
+            $this->assertEquals(14 , $result);
+        }
     }
 
 
