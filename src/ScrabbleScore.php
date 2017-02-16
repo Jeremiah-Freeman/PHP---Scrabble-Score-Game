@@ -18,6 +18,11 @@
             'c' => 3,
             'm' => 3,
             'p' => 3,
+            'f' => 4,
+            'h' => 4,
+            'v' => 4,
+            'w' => 4,
+            'y' => 4,
             'k' => 5,
             'j' => 8,
             'x' => 8,
@@ -25,6 +30,21 @@
             'z' => 10
         );
 
+        function test_Input($input)
+        {
+            $output = 0;
+            $input_letter = str_split($input);
+
+            foreach ($input_letter as $letter) {
+                foreach ($this->list_of_letters as $key => $value) {
+                    if ($letter == $key) {
+                        $output += $value;
+                    }
+                }
+            }
+
+            return $output;
+        }
 
         function getLetter()
         {
@@ -50,20 +70,6 @@
             return $output;
         }
 
-        function test_Input($input)
-        {
-            $output = 0;
-            $input_letter = str_split($input);
 
-            foreach($input_letter as $value) {
-                foreach($this->list_of_letters as $letter_match) {
-                    if ($value == $letter_match) {
-                        $output += $letter_match;
-                    }
-                }
-            }
-
-            return $output;
-        }
     }
 ?>
